@@ -60,4 +60,4 @@ counter_v2 5
 used_percent=$(df -h | awk 'FNR==2{print $5}' | sed 's/%//')
 echo "the root partition is $used_percent percent used"
 # lets walk through it and have a look
-# note the use of 2 pipes (|) and three commands
+# note the use of 2 pipes (|) and three commands - this is a form of chaining
