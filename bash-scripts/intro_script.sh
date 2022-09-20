@@ -15,7 +15,7 @@ done
 
 # how do we pass parameters from the command line
 # into this bash script. 
-# we use the notation $1, $$2 etc to represent
+# we use the notation $1, $2 etc to represent
 # the first, second etc parameter into this script
 if [ -z $1 ]; then
 	echo "You didn't pass any paraemters to $0"
