@@ -23,9 +23,9 @@ fi
 bucket_audit() {
 	gsutil ls gs://$1 2>/dev/null
 	if [ $? -eq 0 ]; then
-		echo "Bucket naming policy violation with $1"
+		echo "Bucket naming policy violation found with gs://$1"
 	else 
-		echo "No bucket naming policy violation with $1"
+		echo "No bucket naming policy violation found with gs://$1"
 	fi
 }
 

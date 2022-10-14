@@ -8,10 +8,10 @@ bucket_maker() {
 	for c in {1..5}; do
 		gsutil mb gs://$1$c 2>/dev/null
 		if [ $? -lt 1 ]; then
-			echo "bucket maker worked using gs://$1$c"
+			echo "Bucket Maker succeeded using gs://$1$c ... finished"
 			exit 0
 		else
-			echo "bucket maker failed using gs://$1$c"
+			echo "Bucket Maker failed using gs://$1$c"
 		fi
 	done
 	exit 1
@@ -20,9 +20,9 @@ bucket_maker() {
 gsutil mb gs://$1 2>/dev/null
 
 if [ $? -gt 0 ]; then
-	echo "Bucket make failed for gs://$1 ... tryng loop"
+	echo "Bucket Maker failed for gs://$1 ... entering loop"
 	bucket_maker $1
 else
-	echo "bucket maker successful using gs://$1"	
+	echo "Bucket Maker successful using gs://$1 ... finished"	
 	exit 0
 fi
